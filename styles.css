@@ -1,0 +1,176 @@
+#container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.page {
+	border-radius: 20px;
+	background-color: lightblue;
+	margin: 5px;
+	display: flex;
+	flex-direction: column;
+}
+
+.bundle {
+	border-radius: 20px;
+	display: flex;
+	margin: 5px;
+	padding: 5px;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	max-width: 300px;
+}
+
+.title {
+	flex: 100% 0 0;
+	text-align: center;
+	font-family: "verdana";
+	font-weight: bold;
+}
+
+.item {
+	background-color: aliceblue;
+	border-radius: 20px;
+	padding: 8px;
+	margin: 5px 5px;
+	font-size: 0;
+	cursor: pointer;
+	position: relative;
+}
+
+.item.rain {
+	border: 3px dashed blue;
+	padding: 5px;
+}
+
+.day::after {
+	content: "☀";
+	display: block;
+	font-size: 25px;
+	position: absolute;
+	top: 0;
+	color: gold;
+	text-shadow: 1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black;
+}
+
+.night::after {
+	content: "🌙";
+	display: block;
+	font-size: 20px;
+	position: absolute;
+	top: 0;
+}
+
+.gold::after {
+	content: "⭐";
+	display: block;
+	font-size: 20px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	border-radius: 10px;
+	color: gold;
+	font-weight: bold;
+}
+
+.checkbox {
+	opacity: 0;
+	position: absolute;
+}
+
+.check {
+	opacity: 0;
+	position: absolute;
+	font-size: 50;
+	font-weight: bold;
+	-webkit-text-stroke: 2px white;
+	top: 0;
+}
+
+.check::after {
+	content: "✓";
+}
+
+.checkbox:checked+.check {
+	opacity: 1;
+}
+
+.pantry {
+	background-color: darkseagreen;
+}
+
+.foraging {
+	background-color: navajowhite;
+}
+
+.fishing {
+	background-color: cornflowerblue;
+}
+
+.boiler {
+	background-color: slategrey;
+}
+
+.vault {
+	background-color: gold;
+}
+
+.bulletin {
+	background-color: crimson;
+}
+
+.spring {
+	background-color: #99ff33;
+}
+
+.summer {
+	background-color: #ff66cc;
+}
+
+.fall {
+	background-color: #ff9966;
+}
+
+.winter {
+	background-color: #ccffff;
+}
+
+.spring.summer {
+	background: -webkit-linear-gradient(top, #99ff33, #99ff33 50%, #ff66cc 50%, #ff66cc);
+}
+
+.spring.fall {
+	background: -webkit-linear-gradient(top, #99ff33, #99ff33 50%, #ff9966 50%, #ff9966);
+}
+
+.spring.winter {
+	background: -webkit-linear-gradient(top, #99ff33, #99ff33 50%, #ccffff 50%, #ccffff);
+}
+
+.spring.summer.fall {
+	background: -webkit-linear-gradient(top, #99ff33, #99ff33 33%, #ff66cc 33%, #ff66cc 67%, #ff9966 67%, #ff9966);
+}
+
+.spring.summer.winter {
+	background: -webkit-linear-gradient(top, #99ff33, #99ff33 33%, #ff66cc 33%, #ff66cc 67%, #ccffff 67%, #ccffff);
+}
+
+.spring.fall.winter {
+	background: -webkit-linear-gradient(top, #99ff33, #99ff33 33%, #ff9966 33%, #ff9966 67%, #ccffff 67%, #ccffff);
+}
+
+.summer.fall {
+	background: -webkit-linear-gradient(top, #ff66cc, #ff66cc 50%, #ff9966 50%, #ff9966);
+}
+
+.summer.winter {
+	background: -webkit-linear-gradient(top, #ff66cc, #ff66cc 50%, #ccffff 50%, #ccffff);
+}
+
+.summer.fall.winter {
+	background: -webkit-linear-gradient(top, #ff66cc, #ff66cc 33%, #ff9966 33%, #ff9966 67%, #ccffff 67%, #ccffff);
+}
+
+.fall.winter {
+	background: -webkit-linear-gradient(top, #ff9966, #ff9966 50%, #ccffff 50%, #ccffff);
+}
